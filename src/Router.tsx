@@ -1,17 +1,22 @@
-import { Route, Routes, Navigate } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
+import { Home } from './pages/Home'
+import { Politica } from './pages/Politica'
+import { Post } from './pages/Post'
+import { BlogPage } from './pages/BlogPage'
+import { MaisConsultas } from './pages/MaisConsultas'
 
-import { Subscribe } from './pages/Subscribe'
 import { Event } from './pages/Event'
 
 export function Router() {
   return (
     <Routes>
-      <Route path="/" element={<Subscribe />} />
-      <Route
-        path="/event"
-        element={<Navigate to="/event/lesson/abertura-do-evento-ignite-lab" />}
-      />
+      <Route path="/" element={<Home />} />
       <Route path="/event/lesson/:slug" element={<Event />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/maisconsultas" element={<MaisConsultas />} />
+      <Route path="/blogpage" element={<BlogPage />} />
+      <Route path="/politica" element={<Politica />} />
+      <Route path="/blogpage/post/:slug" element={<Post />} />
     </Routes>
   )
 }

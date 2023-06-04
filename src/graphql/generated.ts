@@ -5581,7 +5581,18 @@ export type GetLessonBySlugQueryVariables = Exact<{
 }>;
 
 
-export type GetLessonBySlugQuery = { __typename?: 'Query', lesson?: { __typename?: 'Lesson', title: string, videoId: string, description?: string | null, teacher?: { __typename?: 'Teacher', avatarURL: string, name: string, bio: string } | null } | null };
+export type GetLessonBySlugQuery = { __typename?: 'Query', lesson?: {
+  subtext5: ReactNode;
+  blogtext5: ReactNode;
+  blogtext4: ReactNode;
+  subtext4: ReactNode;
+  blogtext3: ReactNode;
+  blogtext: ReactNode;
+  blogtext1: ReactNode;
+  textcenter: ReactNode;
+  subtext2: ReactNode;
+  blogtext2: ReactNode; __typename?: 'Lesson', title: string, videoId: string, description?: string | null, teacher?: { __typename?: 'Teacher', avatarURL: string, name: string, bio: string } | null 
+} | null };
 
 export type GetLessonsQueryVariables = Exact<{ [key: string]: never; }>;
 
